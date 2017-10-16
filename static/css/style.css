@@ -1,3 +1,65 @@
-h1 {
-	color: blue;
+/* CSS styles are here */
+
+/*element: p*/
+/*class: .center*/
+/*id: #para*/
+
+header, footer {
+    font: 12px georgia, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center
 }
+
+p, ol, ul {
+	font: 15px georgia, sans-serif;
+	text-align: justify;
+}
+
+h1 {
+	font: 2em georgia, sans-serif;
+}
+
+h2 {
+	font: 1.5em georgia, sans-serif;
+}
+
+h3 {
+	font: 1.17em, georgia, sans-serif;
+}
+
+#contact {
+	color: red;
+}
+
+p.frontPageLinks {
+    text-align: left;
+    margin-left: 20px;
+}
+
+input[type = text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+input[type = submit] {
+    background-color: #808080;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contactForm, #commentForm1, #commentForm2, #commentForm3, #commentForm4, #commentForm5 {
+	width: 25%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+

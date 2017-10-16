@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Assignment 2</title>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="/static/css/style.css" />
+		<meta charset="utf-8"/>
+		<title>Assignment 1 - INFO 253 Web Architecture</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
 	</head>
 	<body>
-		<h1>Hello World</h1>
+		<header>
+			<a href="{{ url_for('index') }}">Home Page</a> &nbsp;
+      		<a href="{{ url_for('about') }}">About Us</a> &nbsp;
+      		<a href="{{ url_for('contact') }}">Contact Us</a>
+		</header>
 
-		<script src="/static/js/script.js"></script>
+		<h1>My First Assignment: Blog</h1>
+		<p class = "frontPageLinks">
+			<a href="{{ url_for('motivation') }}">8 Experiments in Motivation</a><br>
+			<a href="{{ url_for('mindful') }}">A Mindful Shift of Focus</a> <br>
+			<a href="{{ url_for('direction') }}">How to Develop an Awesome Sense of Direction</a> <br>
+			<a href="{{ url_for('writer') }}">Training to Be a Good Writer</a> <br>
+			<a href="{{ url_for('productivity') }}">What Productivity Systems Won't Solve</a>
+			</p>
 
+		<footer>
+		<br><br>
+			<a href="{{ url_for('index') }}">Home Page</a> &nbsp;
+			<a href="{{ url_for('about') }}">About Us</a> &nbsp;
+			<a href="{{ url_for('contact') }}">Contact Us</a> &nbsp;
+		</footer>
 	</body>
-</html>		
+</html>
+	
