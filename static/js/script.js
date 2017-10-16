@@ -4,6 +4,7 @@ contactForm.addEventListener("submit", function(event) {
 	var name = contactForm.elements.namedItem("name").value;
 	var subject = contactForm.elements.namedItem("subject").value;
 	var message = contactForm.elements.namedItem("message").value;
+	var email = contactForm.elements.namedItem("email").value;
 	var output = document.getElementById("contact");
 	var missing = ""
 	// console.log(name);
@@ -11,6 +12,9 @@ contactForm.addEventListener("submit", function(event) {
 	if(name == "" || subject == "" || message == "") {
 		if(name === "") {
 			missing += "name ";
+		}
+		if(email === "") {
+			missing += "email ";
 		}
 		if(subject === "") {
 			missing += "subject ";
@@ -22,7 +26,7 @@ contactForm.addEventListener("submit", function(event) {
 	} else {
 		var xhttp = new XMLHttpRequest();
 		xhttp.open("POST","/f",true);
-		s = xhttp.send('{"name":"' + name + '","subject":"' + subject + '","msg":"' + message + '"}')
+		s = xhttp.send('{"name":"' + name + '","email":"' + email + '","subject":"' + subject + '","msg":"' + message + '"}')
 		message = "";
 		subject = "";
 		output.innerHTML = 'Hi ' + name + ', your message has been sent';
